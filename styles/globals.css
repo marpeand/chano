@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    tr,
+    td,
+    th {
+        @apply text-center;
+    }
+}
+
+.prose .anchor {
+    @apply invisible absolute;
+    margin-left: -0.8em;
+    padding-right: 0.5em;
+    width: 80%;
+    max-width: 700px;
+    cursor: pointer;
+}
+
+.anchor:hover {
+    @apply visible no-underline;
+}
+
+.prose .anchor:after {
+    @apply text-[#989898] dark:text-[#404040];
+    content: '#';
+    font-weight: 900;
+}
+
+.prose *:hover > .anchor {
+    @apply visible no-underline;
+}
+
+.theme-icon {
+    @apply fill-slate text-xl hover:fill-black dark:fill-silver md:text-base;
+}

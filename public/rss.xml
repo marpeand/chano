@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Chano</title>
+        <link>https://chano.vercel.app</link>
+        <description>Personal Blog and Portfolio template build using NextJS &amp; TailwindCSS</description>
+        <lastBuildDate>Tue, 17 Oct 2023 13:19:23 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en-US</language>
+        <copyright>All rights reserved 2023, chano</copyright>
+    </channel>
+</rss>
