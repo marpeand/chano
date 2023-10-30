@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-row flex-wrap items-center justify-around text-lg md:text-sm">
                 <SocialLink link={social.github} name="github" />
-                <SocialLink link={social.twitter} name="twitter (X)" />
+                <SocialLink link={social.twitter} name="X (twitter)" />
                 <SocialLink link={social.linkedin} name="linkedin" />
                 <SocialLink link={social.coffee} name="buy me a coffe" />
                 <SocialLink link={social.kofi} name="kofi" />
