@@ -78,9 +78,14 @@ export default function Page({ params }: { params: { slug: string } }) {
             <div className="prose font-extralight dark:prose-invert">
                 <div className=" space-x-1">
                     <span>{'-'} reply in </span>
-                    <a href="#">Twitter(x)</a>
-                    <span>{'/'}</span>
-                    <a href="#">Mastodon</a>
+                    <a
+                        href={`https://twitter.com/intent/tweet?text=${post.title}&url=${
+                            CONFIG.url + post.url
+                        }`}
+                        target="_blank"
+                    >
+                        Twitter(x)
+                    </a>
                 </div>
                 <div className="flex space-x-1">
                     {post.lastUpdate && (
