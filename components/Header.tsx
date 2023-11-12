@@ -23,7 +23,7 @@ const Header = () => {
     }
 
     return (
-        <header className="flex w-full justify-between xl:w-3/6">
+        <header className="flex w-full justify-between 2xl:w-3/6">
             <Link href="/" className="flex w-1/6 items-center justify-center " aria-label={author}>
                 <Logo />
             </Link>

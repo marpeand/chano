@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     )}
                     <div className="relative flex min-h-screen w-full flex-col items-center justify-center py-6">
                         <Header />
-                        <main className="mt-9 flex w-[90%] grow flex-col items-center md:w-full lg:w-5/6 xl:w-3/6">
+                        <main className="mt-9 flex w-[90%] grow flex-col items-center md:w-full lg:w-5/6 2xl:w-3/6">
                             {children}
                         </main>
                         <Footer />
