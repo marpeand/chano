@@ -1,21 +1,10 @@
 'use client'
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 
 function Logo() {
     const { resolvedTheme } = useTheme()
-    const [mounted, setMounted] = useState(false)
-
     let src
-
-    useEffect(() => {
-        setMounted(true)
-    }, [])
-
-    if (!mounted) {
-        return null
-    }
 
     switch (resolvedTheme) {
         case 'light':
@@ -25,7 +14,7 @@ function Logo() {
             src = '/logo.dark.svg'
             break
         default:
-            src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+            src = '/logo.dark.svg' // dark logo works as default logo while the UI loads.
             break
     }
 

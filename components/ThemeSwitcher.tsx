@@ -5,7 +5,7 @@ import { FaRegMoon } from 'react-icons/fa'
 
 const ThemeSwitcher = () => {
     const [mounted, setMounted] = useState(false)
-    const { theme, setTheme, resolvedTheme } = useTheme()
+    const { theme, setTheme } = useTheme()
 
     useEffect(() => {
         setMounted(true)
@@ -21,7 +21,7 @@ const ThemeSwitcher = () => {
             className="p-2 "
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
-            {theme === 'dark' || resolvedTheme === 'dark' ? (
+            {theme === 'dark' || theme === 'dark' ? (
                 <BiSolidSun className="theme-icon dark:hover:fill-white" />
             ) : (
                 <FaRegMoon className="theme-icon" />
