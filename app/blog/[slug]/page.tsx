@@ -84,7 +84,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                         }`}
                         target="_blank"
                     >
-                        Twitter(x)
+                        X(twitter)
                     </a>
                 </div>
                 <div className="flex space-x-1">
