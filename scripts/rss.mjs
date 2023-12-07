@@ -23,7 +23,7 @@ currentPosts.map((post) => {
     feed.item({
         title: post.title,
         description: post.description,
-        url: `${site_url}${post.slug}`,
+        url: `${site_url}/blog/${post.slug}`,
         date: post.date,
     })
 })
