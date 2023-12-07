@@ -1,37 +1,31 @@
-import { compareDesc, parseISO } from 'date-fns'
-import { Feed } from 'feed'
-import { writeFileSync } from 'fs'
+import fs from 'fs'
+import RSS from 'rss'
 import { allPosts } from '../.contentlayer/generated/index.mjs'
 import CONFIG from '../blog.config.js'
 
-const feed = new Feed({
+const site_url = process.env.NODE_ENV === 'production' ? CONFIG.url : 'http://localhost:3000'
+
+const feedOptions = {
     title: CONFIG.title,
     description: CONFIG.siteDescription,
-    link: CONFIG.url,
-    language: CONFIG.lang,
-    favicon: `${CONFIG.url}/favicon.png`,
-    copyright: `All rights reserved ${CONFIG.year}, ${CONFIG.author}`,
-    author: {
-        name: CONFIG.author,
-        link: CONFIG.socialLink,
-    },
+    site_url: site_url,
+    feed_url: `${site_url}/rss.xml`,
+    pubDate: new Date(),
+    copyright: `All rights reserved ${new Date().getFullYear()} ${CONFIG.author}`,
+}
+
+const feed = new RSS(feedOptions)
+
+const filteredPosts = allPosts.filter((post) => !post.draft)
+const currentPosts = filteredPosts.sort((a, b) => b.date.localeCompare(a.date))
+
+currentPosts.map((post) => {
+    feed.item({
+        title: post.title,
+        description: post.description,
+        url: `${site_url}${post.slug}`,
+        date: post.date,
+    })
 })
 
-allPosts
-    .filter((post) => {
-        post.draft !== true
-    })
-    .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
-    .forEach((post) => {
-        const url = `${CONFIG.url}/blog/${post._raw.flattenedPath}`
-        feed.addItem({
-            id: url,
-            link: url,
-            title: post.title,
-            description: post.summary,
-            date: parseISO(post.date),
-            category: post.tags.map((name) => ({ name })),
-        })
-    })
-
-writeFileSync('./public/rss.xml', feed.rss2(), { encoding: 'utf-8' })
+fs.writeFileSync('./public/rss.xml', feed.xml({ indent: true }))

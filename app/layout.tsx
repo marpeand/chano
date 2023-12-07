@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
             <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
             <link rel="manifest" href="/favicons/site.webmanifest" />
-            <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+            <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
             <body className="bg-light transition-colors duration-200 dark:bg-dark">
                 <ThemeProviders>
                     {CONFIG.useGoogleAnalytics && (
