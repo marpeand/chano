@@ -1,4 +1,4 @@
-import { author, social, year } from '@/blog.config'
+import { author, social, year } from '@/blog.config';
 
 const SocialLink = ({ link, name }: { link: string; name: string }) => {
     if (!link) {
@@ -7,7 +7,7 @@ const SocialLink = ({ link, name }: { link: string; name: string }) => {
 
     return (
         <a
-            className="px-3 text-[20px] hover:underline md:text-sm"
+            className="px-3 py-1 text-[17px] hover:underline md:text-sm"
             href={link}
             target="_blank"
             rel="noopener noreferrer"
@@ -25,7 +25,7 @@ const Footer = () => {
                     © {author} ({year})
                 </p>
             </div>
-            <div className="flex flex-row flex-wrap items-center justify-around text-lg md:text-sm">
+            <div className="flex flex-row flex-wrap items-center justify-around">
                 <SocialLink link={social.github} name="github" />
                 <SocialLink link={social.twitter} name="X (twitter)" />
                 <SocialLink link={social.linkedin} name="linkedin" />
