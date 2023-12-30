@@ -63,8 +63,8 @@ export default function Page({ params }: { params: { slug: string } }) {
                     ))}
                 </ul>
                 <h1 className="text-4xl font-bold">{post.title}</h1>
-                <p className="text-base text-[#656565] dark:text-[#989898]">{post.summary}</p>
-                <div className="text-sm text-[#8A8A8A]">
+                <p className="text-[#525252] dark:text-silver">{post.summary}</p>
+                <div className="text-sm text-[#858585]">
                     <span>
                         <FormatDate dateString={post.date} />
                     </span>
