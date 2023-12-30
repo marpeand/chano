@@ -24,6 +24,17 @@
 
 <div align="center">
 
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
+</div>
+<br />
+
+<div align="center">
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmarpeand%2Fchano)
 <span style="margin-left:5px"></span>
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/marpeand/chano)
@@ -45,6 +56,11 @@
 -   Dark/Light mode
 -   RSS feed
 -   Tag support
+
+# Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
 ## Installation
 
@@ -171,4 +187,20 @@ Also you can open an [issue](https://github.com/marpeand/chano/issues/new) with 
 
 By contributing to the project, you agree to license your contributions under the same license as the project itself. See the [LICENSE](LICENSE) file for more information.
 
+[contributors-shield]: https://img.shields.io/github/contributors/marpeand/chano.svg?style=for-the-badge
+[contributors-url]: https://github.com/marpeand/chano/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/marpeand/chano.svg?style=for-the-badge
+[forks-url]: https://github.com/marpeand/chano/network/members
+[stars-shield]: https://img.shields.io/github/stars/marpeand/chano.svg?style=for-the-badge
+[stars-url]: https://github.com/marpeand/chano/stargazers
+[issues-shield]: https://img.shields.io/github/issues/marpeand/chano.svg?style=for-the-badge
+[issues-url]: https://github.com/marpeand/chano/issues
+[license-shield]: https://img.shields.io/github/license/marpeand/chano.svg?style=for-the-badge
+[license-url]: https://github.com/marpeand/chano/blob/main/LICENSE
 [screenshot]: public/static/chano-screenshot.png
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[TailwindCSS]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwind-url]: https://tailwindcss.com/
+[Typescript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[Typescript-url]: https://tailwindcss.com/
