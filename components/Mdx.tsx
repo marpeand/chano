@@ -6,8 +6,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ReactNode, useRef, useState } from 'react'
 
+import { LuCopy, LuCopyCheck } from 'react-icons/lu'
+
 const Pre = ({ children, className }: { children: ReactNode; className?: string }) => {
-    const textInput = useRef(null)
+    const textInput = useRef<any>(null)
     const [hovered, setHovered] = useState(false)
     const [copied, setCopied] = useState(false)
 
@@ -18,9 +20,12 @@ const Pre = ({ children, className }: { children: ReactNode; className?: string 
         setHovered(false)
         setCopied(false)
     }
+
     const onCopy = () => {
         setCopied(true)
-        // Agregar funcion para copiar
+        if (textInput.current) {
+            navigator.clipboard.writeText(textInput.current.textContent)
+        }
         setTimeout(() => {
             setCopied(false)
         }, 2000)
@@ -31,14 +36,20 @@ const Pre = ({ children, className }: { children: ReactNode; className?: string 
             {hovered && (
                 <button
                     aria-label="Copy code"
-                    className={`bg-gray-700 dark:bg-gray-800 absolute right-2 top-2  rounded-xl border-2 p-1 ${
+                    className={`bg-gray-700 dark:bg-gray-800 border-1 absolute right-2  top-2 rounded-xl p-1 ${
                         copied
                             ? 'border-green-400 focus:border-green-400 focus:outline-none'
                             : 'border-gray-300'
                     }`}
                     onClick={onCopy}
                 >
-                    <>{copied ? <span>Copied!</span> : <span>Copy Code</span>}</>
+                    <>
+                        {copied ? (
+                            <LuCopyCheck size={25} className="text-green-400" />
+                        ) : (
+                            <LuCopy size={25} />
+                        )}
+                    </>
                 </button>
             )}
 
