@@ -6,7 +6,6 @@ const CONFIG = {
     lang: 'en-US',
     theme: 'dark', // 'dark' or 'light'
     postPerPage: 6, // Number of post at /
-    year: 2023,
     links: [
         { id: 0, name: 'Home', href: '/' },
         { id: 1, name: 'About', href: '/about' },

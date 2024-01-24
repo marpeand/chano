@@ -1,4 +1,4 @@
-import { author, social, year } from '@/blog.config';
+import { author, social } from '@/blog.config';
 
 const SocialLink = ({ link, name }: { link: string; name: string }) => {
     if (!link) {
@@ -22,7 +22,7 @@ const Footer = () => {
         <footer className="mt-10 flex w-[90%] flex-col-reverse justify-between text-sm font-light text-black dark:text-silver lg:flex-row 2xl:w-3/6">
             <div className="lg:w-1/6">
                 <p className="my-5 flex justify-center xl:my-0">
-                    © {author} ({year})
+                    © {author} ({new Date().getFullYear()})
                 </p>
             </div>
             <div className="flex flex-row flex-wrap items-center justify-around">
