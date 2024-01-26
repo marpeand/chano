@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@/utils/cn'
 import type { MDXComponents } from 'mdx/types'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
@@ -36,11 +37,12 @@ const Pre = ({ children, className }: { children: ReactNode; className?: string 
             {hovered && (
                 <button
                     aria-label="Copy code"
-                    className={`bg-gray-700 dark:bg-gray-800 border-1 absolute right-2  top-2 rounded-xl p-1 ${
+                    className={cn(
+                        'bg-gray-700 dark:bg-gray-800 border-1 absolute right-2  top-2 rounded-xl p-1',
                         copied
                             ? 'border-green-400 focus:border-green-400 focus:outline-none'
                             : 'border-gray-300'
-                    }`}
+                    )}
                     onClick={onCopy}
                 >
                     <>
