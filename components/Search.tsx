@@ -22,6 +22,7 @@ const Search = () => {
                 value={searchTerm}
                 onChange={handleSearch}
                 placeholder="Type to search articles"
+                aria-label="Search articles"
             />
             {filteredPosts.length === 0 ? (
                 <div className="mt-10 flex justify-center ">
