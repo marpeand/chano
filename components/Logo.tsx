@@ -1,4 +1,7 @@
 'use client'
+
+import { title } from '@/blog.config'
+
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
 
@@ -18,7 +21,7 @@ function Logo() {
             break
     }
 
-    return <Image src={src} width={30} height={30} alt="" className="ml-2" />
+    return <Image src={src} width={30} height={30} alt={`${title} logo`} className="ml-2" />
 }
 
 export default Logo
