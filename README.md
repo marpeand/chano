@@ -10,7 +10,7 @@
   <p align="center">
     Personal Blog and Portfolio template build using NextJS & TailwindCSS. :rocket:
     <br />
-    <a href=""><strong>(https://chano.vercel.app/)</strong></a>
+    <a href="https://chano.vercel.app"><strong>(https://chano.vercel.app/)</strong></a>
     <br />
     <br />
     <a href="https://github.com/marpeand/chano/discussions">Start a Discussion</a>
@@ -198,9 +198,3 @@ By contributing to the project, you agree to license your contributions under th
 [license-shield]: https://img.shields.io/github/license/marpeand/chano.svg?style=for-the-badge
 [license-url]: https://github.com/marpeand/chano/blob/main/LICENSE
 [screenshot]: public/static/chano-screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[TailwindCSS]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
-[Tailwind-url]: https://tailwindcss.com/
-[Typescript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
-[Typescript-url]: https://tailwindcss.com/
