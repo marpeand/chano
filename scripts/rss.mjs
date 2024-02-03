@@ -5,13 +5,15 @@ import CONFIG from '../blog.config.js'
 
 const site_url = process.env.NODE_ENV === 'production' ? CONFIG.url : 'http://localhost:3000'
 
+const currentDate = new Date();
+
 const feedOptions = {
     title: CONFIG.title,
     description: CONFIG.siteDescription,
     site_url: site_url,
     feed_url: `${site_url}/rss.xml`,
-    pubDate: new Date(),
-    copyright: `All rights reserved ${new Date().getFullYear()} ${CONFIG.author}`,
+    pubDate: currentDate,
+    copyright: `All rights reserved ${currentDate.getFullYear()} ${CONFIG.author}`,
 }
 
 const feed = new RSS(feedOptions)
