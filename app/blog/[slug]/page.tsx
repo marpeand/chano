@@ -52,7 +52,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                 <ul className="mb-4 flex flex-wrap">
                     {post.tags?.map((tag) => (
                         <li
-                            className="mb-2 mr-2 rounded bg-white text-[14px] font-medium capitalize text-[#3e3e3e] dark:bg-[#404040] dark:text-white"
+                            className="text-onyx dark:bg-onyx mb-2 mr-2 rounded bg-white text-[14px] font-medium capitalize dark:text-white"
                             key={tag}
                             title={slug(tag)}
                         >

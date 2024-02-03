@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 interface ProjectProps {
     href: string
     title: string
@@ -31,13 +30,13 @@ const ProjectCard = ({ title, description, image, href }: ProjectProps) => {
         <Link
             href={href}
             target="_blank"
-            className="delay-50 rounded-lg transition hover:bg-[#404040] hover:bg-opacity-5 dark:hover:bg-[#fff] dark:hover:bg-opacity-5"
+            className="delay-50 rounded-lg transition hover:bg-onyx hover:bg-opacity-5 dark:hover:bg-white dark:hover:bg-opacity-5"
         >
-            <div className="group flex flex-col rounded-lg px-3 py-2 text-black dark:text-white ">
+            <div className="flex flex-col rounded-lg px-3 py-2 text-black dark:text-white ">
                 <img src={image} width={35} height={35} className="my-3 " alt="Project Logo" />
-                <h1 className="mt-2 font-semibold text-[#272727] dark:text-white">{title}</h1>
+                <h1 className="mt-2 font-semibold text-onyx dark:text-white">{title}</h1>
                 <p className=" mt-1 text-sm  dark:text-silver">{description}</p>
-                <p className="mt-6 flex items-center group-hover:text-[#64B1E5]">
+                <p className="mt-6 flex items-center text-dark dark:text-white">
                     <LinkIcon />
                     <span className="ml-2 text-sm font-semibold ">
                         {href.replace(/^https?:\/\//, '')}

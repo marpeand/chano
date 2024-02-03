@@ -20,6 +20,7 @@ module.exports = {
                 black: '#353535',
                 slate: '#6B6B6B',
                 gray: '#525252',
+                onyx: '#404040',
             },
         },
     },

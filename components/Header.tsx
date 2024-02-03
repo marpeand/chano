@@ -28,7 +28,7 @@ const Header = () => {
                 <Logo />
             </Link>
             <div className="hidden w-4/6 items-center justify-end md:flex">
-                <ul className="flex space-x-10 text-[#868c96] dark:text-silver">
+                <ul className="text-onyx flex space-x-10 dark:text-silver">
                     {links.map((item) => (
                         <li key={item.id}>
                             <Link

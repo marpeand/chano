@@ -16,7 +16,7 @@ export default async function Page() {
                 />
                 <div className="flex flex-col">
                     <h1 className="mb-2 text-3xl font-bold">{author}</h1>
-                    <p className="font-base text-[#555] dark:text-[#bbb] ">{authorIntroduction}</p>
+                    <p className="font-base text-onyx dark:text-silver ">{authorIntroduction}</p>
                 </div>
             </div>
             <Main />

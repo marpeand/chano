@@ -24,7 +24,7 @@
 }
 
 .prose .anchor:after {
-    @apply text-[#989898] dark:text-[#404040];
+    @apply text-[#989898] dark:text-onyx;
     content: '#';
     font-weight: 900;
 }
