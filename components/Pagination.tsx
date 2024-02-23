@@ -1,7 +1,10 @@
+import { cn } from '@/utils/cn'
+
 interface PaginationProps {
     currentPage: number
     totalPosts: number
     postsPerPage: number
+    // eslint-disable-next-line no-unused-vars
     onPageChange: (pageNumber: number) => void
 }
 
@@ -22,9 +25,10 @@ const Pagination = ({ currentPage, totalPosts, postsPerPage, onPageChange }: Pag
             {pageNumbers.map((pageNumber) => (
                 <span
                     key={pageNumber}
-                    className={`mr-2 cursor-pointer py-1 text-lg md:text-sm ${
+                    className={cn(
+                        'mr-2 cursor-pointer py-1 text-lg md:text-sm',
                         pageNumber === currentPage ? 'underline' : ''
-                    }`}
+                    )}
                     onClick={handlePageClick.bind(null, pageNumber)}
                 >
                     {pageNumber}
